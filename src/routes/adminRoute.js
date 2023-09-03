@@ -7,7 +7,7 @@ export const AdminRoutes = [
         element: lazy(() => import('../pages/app/home')),
     },
     {
-        path: 'app//report',
+        path: 'app/report',
         element: lazy(() => import('../pages/app/report')),
     },
 ]
