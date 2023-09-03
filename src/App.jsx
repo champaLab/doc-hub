@@ -4,6 +4,8 @@ import Home from './pages/app/home'
 import { PublicRoutes } from './routes/publicRoute'
 
 const App = () => {
+
+
     return (
         <BrowserRouter >
             <Routes>
@@ -14,6 +16,7 @@ const App = () => {
                 {PublicRoutes.map((route) => (
                     <Route path={route.path} element={<route.element />} />
                 ))}
+
 
             </Routes>
         </BrowserRouter>

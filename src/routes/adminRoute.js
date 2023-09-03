@@ -3,11 +3,11 @@ import { lazy } from "react";
 
 export const AdminRoutes = [
     {
-        path: '/',
+        path: '/app',
         element: lazy(() => import('../pages/app/home')),
     },
     {
-        path: '/report',
+        path: 'app//report',
         element: lazy(() => import('../pages/app/report')),
     },
 ]
