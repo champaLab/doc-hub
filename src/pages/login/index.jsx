@@ -1,8 +1,12 @@
 import React from 'react'
+import Loading from '../../components/Loading'
 
 const Login = () => {
     return (
-        <div>Login</div>
+        <div>
+            <h1>Login</h1>
+            <Loading />
+        </div>
     )
 }
 
