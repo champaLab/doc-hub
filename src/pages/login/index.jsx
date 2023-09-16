@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Loading from '../../components/Loading'
 import { useDispatch, useSelector } from 'react-redux'
 import { Box, Button, Card, Container, Grid, TextField, Typography } from '@mui/material'
@@ -22,7 +22,14 @@ const Login = () => {
 
     function handleLogin() {
         dispatch(handleSetLogin(_user))
+
     }
+
+    useEffect(() => {
+        if (auth && auth.isLogged) {
+            navigate('/app')
+        }
+    }, [auth])
 
     return (
         <div>
