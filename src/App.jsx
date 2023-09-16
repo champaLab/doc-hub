@@ -6,6 +6,7 @@ import { AdminRoutes } from "./routes/adminRoute";
 import PublicLayout from "./layouts/public";
 import AdminLayout from "./layouts/admin";
 import Loading from "./components/Loading";
+import AdminMiddleware from "./middlewares/AdminMiddleware";
 
 const App = () => {
     return (
@@ -18,11 +19,14 @@ const App = () => {
                         ))}
                     </Route>
 
-                    <Route path='/app' element={<AdminLayout />} >
-                        {AdminRoutes.map((route, index) => (
-                            <Route path={route.path} element={<route.element />} key={index + '-' + route.name} />
-                        ))}
+                    <Route element={<AdminMiddleware />} >
+                        <Route path='/app' element={<AdminLayout />} >
+                            {AdminRoutes.map((route, index) => (
+                                <Route path={route.path} element={<route.element />} key={index + '-' + route.name} />
+                            ))}
+                        </Route>
                     </Route>
+
 
                 </Routes>
             </Suspense>

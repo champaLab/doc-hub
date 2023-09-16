@@ -15,4 +15,10 @@ export const AdminRoutes = [
         element: lazy(() => import('../pages/app/report')),
         icon: Report,
     },
+    {
+        name: 'Test',
+        path: '/app/test',
+        element: lazy(() => import('../pages/app/test')),
+        icon: Report,
+    },
 ]
